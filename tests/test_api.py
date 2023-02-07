@@ -1,20 +1,4 @@
 import pytest
-from starlite import (
-    AsyncTestClient,
-    Starlite,
-)
-
-import api.app
-
-
-@pytest.fixture()
-def app() -> Starlite:
-    return api.app.app
-
-
-@pytest.fixture()
-def client(app) -> AsyncTestClient:
-    return AsyncTestClient(app)
 
 
 @pytest.mark.asyncio()
