@@ -1,12 +1,10 @@
-from typing import NewType
-
 from pydantic import BaseModel
 from starlite import (
     Starlite,
     get,
 )
 
-StatusMessage = NewType('StatusMessage', str)
+from api.schema.types import StatusMessage
 
 
 class HealthCheckResponse(BaseModel):
